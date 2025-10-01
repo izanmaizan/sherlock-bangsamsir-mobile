@@ -1,0 +1,65 @@
+{
+  "cli": {
+    "version": ">= 16.19.2",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "NODE_ENV": "development",
+        "EXPO_PUBLIC_API_BASE_URL": "http://103.84.208.182:8016/",
+        "API_TIMEOUT": "15000"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "NODE_ENV": "production",
+        "EXPO_PUBLIC_API_BASE_URL": "http://103.84.208.182:8016/",
+        "API_TIMEOUT": "15000",
+        "ENABLE_NETWORK_LOGS": "true"
+      }
+    },
+    "preview-ngrok": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "NODE_ENV": "production",
+        "EXPO_PUBLIC_API_BASE_URL": "https://63553b2aeda8.ngrok-free.app",
+        "API_TIMEOUT": "15000",
+        "ENABLE_NETWORK_LOGS": "true"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease"
+      },
+      "env": {
+        "NODE_ENV": "production",
+        "EXPO_PUBLIC_API_BASE_URL": "http://103.84.208.182:8016/",
+        "API_TIMEOUT": "15000"
+      },
+      "channel": "production"
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./service-account-key.json",
+        "track": "internal"
+      }
+    }
+  }
+}
