@@ -194,22 +194,6 @@ export default function RegisterScreen() {
                   </Text>
                 </View>
               </View>
-
-              {/* Form Title */}
-              {/* <View style={styles.titleContainer}>
-                <Text style={styles.title}>Daftar Akun Baru</Text>
-                <Text style={styles.subtitle}>
-                  Dari Sampah Menjadi Berkah, Menuju Smart Green Hospital
-                </Text>
-              </View> */}
-
-              {/* Hospital Badge */}
-              {/* <View style={styles.hospitalBadge}>
-                <Ionicons name="business" size={16} color={BrandColors.white} />
-                <Text style={styles.hospitalText}>
-                  RSUD Mohammad Natsir Solok
-                </Text>
-              </View> */}
             </View>
 
             {/* Register Form */}
